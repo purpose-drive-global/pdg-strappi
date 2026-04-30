@@ -3,6 +3,7 @@ import type { Core } from '@strapi/strapi';
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({
      upload: {
     config: {
+      sizeLimit: 256 * 1024 * 1024, // 256MB
       provider: 'cloudinary',
       providerOptions: {
         cloud_name: env('CLOUDINARY_NAME'),

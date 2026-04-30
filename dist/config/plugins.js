@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const config = ({ env }) => ({
     upload: {
         config: {
+            sizeLimit: 256 * 1024 * 1024, // 256MB
             provider: 'cloudinary',
             providerOptions: {
                 cloud_name: env('CLOUDINARY_NAME'),
